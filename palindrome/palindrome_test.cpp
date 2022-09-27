@@ -4,10 +4,12 @@
 
 void is_palindrome(char const *str) {
   ASSERT_STREQ(palindrome(str), "Yes");
+  free((char*)str);
 }
 
 void not_palindrome(char const *str) {
   ASSERT_STREQ(palindrome(str), "No");
+  free((char*)str);
 }
 
 TEST(Palindrome, HandlesEmptyString) {
