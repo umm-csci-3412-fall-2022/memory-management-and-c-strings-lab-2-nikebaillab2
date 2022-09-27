@@ -51,9 +51,8 @@ char *palindrome(char const *str) {
     answer[2] = '\0';
   }
 
-  // Freeing the memory stored in rev and in answer
+  // Freeing the memory stored in rev
   free((char*)rev);
-  free((char*)answer);
 
   return answer;
 }
