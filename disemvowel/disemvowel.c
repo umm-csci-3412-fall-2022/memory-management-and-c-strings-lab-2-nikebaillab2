@@ -3,8 +3,8 @@
 #include "disemvowel.h"
 
 char *disemvowel(char *str) {
-  char *consonants = calloc(strlen(str)+1, sizeof(char));
-  char *vowels = calloc(11, sizeof(char));
+  char *consonants =(char*)calloc(strlen(str)+1, sizeof(char));
+  char *vowels = (char*)calloc(11, sizeof(char));
   strcpy(vowels, "aeiouAEIOU\0");
   int j = 0;
   for(int i = 0; i < strlen(str); ++i) {
@@ -14,7 +14,7 @@ char *disemvowel(char *str) {
   }
   consonants[j] = '\0';
 
-  char *result = calloc(strlen(consonants)+1, sizeof(char));
+  char *result = (char*)calloc(strlen(consonants)+1, sizeof(char));
   strcpy(result, consonants);
   result[j] ='\0';
 
